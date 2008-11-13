@@ -1,2 +1,3 @@
 config.ru
 sinatra.log
+tmp/restart.txt
