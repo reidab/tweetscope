@@ -1,0 +1,30 @@
+!!! Strict
+%html
+  %head
+    %title #afterhours: a portland thing
+    %link{ :rel => 'stylesheet', :type => 'text/css', :href => '/afterhours.css' }
+  %body
+    #header
+      %h1 #afterhours
+      %div a portland thing
+  
+    #content
+      %ul
+        - @feed.items.each do |item|
+          %li
+            %a.author{ :href => item.author.split(/\n/)[1].strip }
+              %img.avatar{ :src => item.image }
+              %span.name= extract_author_name(item.author)
+            %a.published{ :href => item.link }
+              %span.date= item.published.localtime.strftime('%B %d')
+              %span.time
+                %span.hour>= item.published.localtime.strftime('%I')
+                %span.minute>= ':'+item.published.localtime.strftime('%M')
+                %span.meridian= item.published.localtime.strftime('%p')      
+            %p.content= prepare_content(item.content)
+            
+    #footer 
+      a tiny project by
+      %a{ :href => 'http://reidbeels.com' } Reid Beels 
+        
+        
