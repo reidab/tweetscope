@@ -84,8 +84,12 @@ li {
 
 #footer {
 	clear: both;
-	padding: 30px 0 30px 246px;
+	padding: 30px 0 30px 40px;
 	font-size: 13px;
 	color: #666;
+}
+
+#footer a {
+	color: #7f1a0e;
 }
 
