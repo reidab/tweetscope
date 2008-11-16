@@ -3,7 +3,7 @@
 require 'sinatra'
 require 'rubygems'
 
-path = "/home/reidab/sites/afterhours.reidab.com"
+path = "/home/reidab/sites/bacon.reidab.com"
 
 Sinatra::Application.default_options.merge!(
   :root => path,
@@ -17,5 +17,5 @@ log = File.new("sinatra.log", "w")
 STDOUT.reopen(log)
 STDERR.reopen(log)
 
-require 'afterhours.rb'
+require 'bacon.rb'
 run Sinatra.application
