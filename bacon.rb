@@ -8,7 +8,7 @@ SimpleRSS.item_tags << :image
 
 
 get '/' do
-  @feed = SimpleRSS.parse open('http://search.twitter.com/search.atom?q=%23afterhours&rpp=20').read.gsub('<link type="image/png"','<image')
+  @feed = SimpleRSS.parse open('http://search.twitter.com/search.atom?q=%23bacon&rpp=20').read.gsub('<link type="image/png"','<image')
   haml :index
 end
 

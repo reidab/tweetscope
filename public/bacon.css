@@ -1,23 +1,32 @@
 /* @override http://localhost:4567/afterhours.css */
 
 body {
-	background: #000 url(background.jpg) no-repeat;
-	color: #fff;
+	background: #ffe5d5 no-repeat;
+	color: #fff2b5;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 a {
-	color: #71b6f1;
+	color: #fff;
 	text-decoration: none;
 }
 
-#header {
+#header h1 {
+	background: url(background.jpg);
+	width: 422px;
+	height: 65px;
+	overflow: hidden;
+	text-indent: -999px;
+	margin-left: 40px;
+}
+
+#header div {
 	display: none;
 }
 
 ul {
 	list-style: none;
-	margin: 110px 0 0 246px;
+	margin: 0 0 0 40px;
 	padding: 0;
 }
 
@@ -26,7 +35,7 @@ img	{
 }
 
 li {
-	background: #111;
+	background: #7f1a0e;
 	padding: .5em;
 	margin: 0 20px 20px 0;
 	width: 25em;
