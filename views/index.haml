@@ -1,12 +1,12 @@
 !!! Strict
 %html
   %head
-    %title #bacon
-    %link{ :rel => 'stylesheet', :type => 'text/css', :href => '/bacon.css' }
+    %title #cyborgcamp
+    %link{ :rel => 'stylesheet', :type => 'text/css', :href => '/cyborgcamp.css' }
   %body
     #header
-      %h1 #bacon
-  
+      %h1
+        %a{ :href => 'http://cyborgcamp.com' } CyborgCamp
     #content
       %ul
         - @feed.items.each do |item|
@@ -25,5 +25,4 @@
     #footer 
       a tiny project by
       %a{ :href => 'http://reidbeels.com' } Reid Beels 
-        
         
