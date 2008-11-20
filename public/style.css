@@ -1,8 +1,8 @@
 /* @override http://localhost:4567/style.css */
 
 body {
-	background: #fff url(getoffmylawn-colored.jpg) no-repeat;
-	padding: 0 0 0 420px;
+	background: #fff url(getoffmylawn-colored.jpg) no-repeat 30px 30px;
+	padding: 0 0 0 455px;
 	color: #523837;
 	font-family: Palatino, "Palatino Linotype", "Book Antiqua", serif;
 }
@@ -34,7 +34,7 @@ img	{
 li {
 	padding: 20px 10px;
 	margin: 0 20px 0 0;
-	width: 35em;
+	width: 33em;
 	float: left;
 	position: relative;
 	border-top: 1px solid #c0afa0;
