@@ -1,13 +1,12 @@
 !!! Strict
 %html
   %head
-    %title #afterhours: a portland thing
+    %title Hey! You Kids! #getoffmylawn!
     %link{ :rel => 'stylesheet', :type => 'text/css', :href => '/style.css' }
   %body
     #header
-      %h1 #afterhours
-      %div a portland thing
-  
+      %h1 Hey! You Kids! #getoffmylawn!
+        
     #content
       %ul
         - @feed.items.each do |item|
@@ -16,11 +15,11 @@
               %img.avatar{ :src => item.image }
               %span.name= extract_author_name(item.author)
             %a.published{ :href => item.link }
-              %span.date= item.published.localtime.strftime('%B %d')
               %span.time
                 %span.hour>= item.published.localtime.strftime('%I')
                 %span.minute>= ':'+item.published.localtime.strftime('%M')
-                %span.meridian= item.published.localtime.strftime('%p')      
+                %span.meridian= item.published.localtime.strftime('%p')
+              %span.date= 'on ' + item.published.localtime.strftime('%B %d')
             %p.content= prepare_content(item.content)
             
     #footer 
