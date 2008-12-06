@@ -2,6 +2,7 @@
 
 require 'sinatra'
 require 'rubygems'
+require 'rack/cache'
 
 path = "/home/reidab/sites/cyborgcamp.reidab.com"
 
@@ -18,4 +19,10 @@ STDOUT.reopen(log)
 STDERR.reopen(log)
 
 require 'cyborgcamp.rb'
+
+use Rack::Cache, 
+   :metastore => 'tmp/meta',
+   :entitystore => 'tmp/entity',
+   :default_ttl => 120
+
 run Sinatra.application
