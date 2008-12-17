@@ -4,7 +4,7 @@ require 'sinatra'
 require 'rubygems'
 require 'rack/cache'
 
-path = "/home/reidab/sites/cyborgcamp.reidab.com"
+path = "/home/reidab/sites/electricblanket.reidab.com"
 
 Sinatra::Application.default_options.merge!(
   :root => path,
@@ -18,7 +18,7 @@ log = File.new("sinatra.log", "w")
 STDOUT.reopen(log)
 STDERR.reopen(log)
 
-require 'cyborgcamp.rb'
+require 'electricblanket.rb'
 
 use Rack::Cache, 
    :metastore => 'tmp/meta',
