@@ -9,6 +9,7 @@ SimpleRSS.item_tags << :image
 
 get '/' do
   @feed = SimpleRSS.parse open('http://search.twitter.com/search.atom?q=%23afterhours&rpp=20').read.gsub('<link type="image/png"','<image')
+  headers 'Cache-Control' => 'public, max-age=300'
   haml :index
 end
 
