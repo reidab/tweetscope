@@ -17,5 +17,5 @@ log = File.new("sinatra.log", "w")
 STDOUT.reopen(log)
 STDERR.reopen(log)
 
-require 'afterhours.rb'
+require 'tweetlens.rb'
 run Sinatra.application
