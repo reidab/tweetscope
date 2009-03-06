@@ -1,8 +1,8 @@
 require 'rubygems'
-require 'simple-rss'
 require 'open-uri'
 require 'sinatra'
-require 'htmlentities'
+require 'vendor/simple-rss-1.2/lib/simple-rss'
+require 'vendor/htmlentities-4.0.0/lib/htmlentities'
 
 SimpleRSS.item_tags << :image
 
