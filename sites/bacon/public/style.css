@@ -1,0 +1,95 @@
+/* @override http://localhost:4567/afterhours.css */
+
+body {
+	background: #ffe5d5 no-repeat;
+	color: #fff2b5;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+a {
+	color: #fff;
+	text-decoration: none;
+}
+
+#header h1 {
+	background: url(background.jpg);
+	width: 422px;
+	height: 65px;
+	overflow: hidden;
+	text-indent: -999px;
+	margin-left: 40px;
+}
+
+#header div {
+	display: none;
+}
+
+ul {
+	list-style: none;
+	margin: 0 0 0 40px;
+	padding: 0;
+}
+
+img	{
+	border: 0;
+}
+
+li {
+	background: #7f1a0e;
+	padding: .5em;
+	margin: 0 20px 20px 0;
+	width: 25em;
+	height: 6em;
+	float: left;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	position: relative;
+}
+
+.avatar {
+	float: left;
+	margin-right: .5em;
+}
+
+.author {
+	font-size: 25px;
+}
+
+.published {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: .5em;
+}
+
+.date {
+	font-size: 10px;
+	color: #ffe5d5;
+}
+
+.time {
+	font-size: 25px;
+}
+
+.meridian {
+	font-size: 10px;
+	margin-left: 3px;
+}
+
+.content {
+	margin: .5em 0 0 60px;
+	font-size: 13px;
+	line-height: 20px;
+}
+
+#footer {
+	clear: both;
+	padding: 30px 0 30px 40px;
+	font-size: 13px;
+	color: #666;
+}
+
+#footer a {
+	color: #7f1a0e;
+}
+

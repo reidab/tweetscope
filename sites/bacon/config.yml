@@ -1,0 +1,7 @@
+# TweetLens Configuration
+
+title: "#bacon"
+tagline: om nom nom
+domain: bacon.reidab.com
+query: "#bacon"
+count: 30
