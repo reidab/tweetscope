@@ -1,12 +1,12 @@
 !!! Strict
 %html
   %head
-    %title== #{CONFIG.title}: #{CONFIG.tagline}
+    %title== #{@site['title']}: #{@site['tagline']}
     %link{ :rel => 'stylesheet', :type => 'text/css', :href => '/style.css' }
   %body
     #header
-      %h1.page_title= CONFIG.title
-      %div.tagline= CONFIG.tagline
+      %h1.page_title= @site['title']
+      %div.tagline= @site['tagline']
 
     #content
       %ul
@@ -27,7 +27,7 @@
       /
         %p 
           We&apos;re searching twitter for &ldquo;
-          %span.query>= CONFIG.query
+          %span.query>= @site['query']
           \&rdquo;
       %p
         a tiny project by
