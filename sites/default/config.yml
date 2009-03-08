@@ -1,0 +1,7 @@
+# TweetLens Configuration
+
+title: TweetLens
+tagline: convex today
+query: "lens"
+count: 20
+cache_max_age: 300
