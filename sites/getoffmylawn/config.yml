@@ -1,0 +1,7 @@
+# TweetLens Configuration
+
+title: "Hey! You Kids! #getoffmylawn!"
+query: "#getoffmylawn"
+domain: getoffmylawn.reidab.com
+count: 40
+cache_max_age: 300

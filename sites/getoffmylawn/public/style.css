@@ -1,0 +1,84 @@
+/* @override http://localhost:4567/style.css */
+
+body {
+	background: #fff url(getoffmylawn-colored.jpg) no-repeat 30px 30px;
+	padding: 0 0 0 455px;
+	color: #523837;
+	font-family: Palatino, "Palatino Linotype", "Book Antiqua", serif;
+}
+
+a {
+	color: #83a157;
+	text-decoration: none;
+}
+
+h1 {
+	color: #683d0f;
+	text-indent: 10px;
+}
+
+#header {
+	margin-top: 5em;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+img	{
+	border: 0;
+}
+
+li {
+	padding: 20px 10px;
+	margin: 0 20px 0 0;
+	width: 33em;
+	float: left;
+	position: relative;
+	border-top: 1px solid #c0afa0;
+}
+
+li p {
+	width: 25em;
+}
+
+.avatar {
+	float: left;
+	margin-right: .5em;
+}
+
+.author {
+	font-size: 25px;
+}
+
+.published {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: .5em;
+}
+
+.date, .time {
+	font-size: 10px;
+}
+
+.meridian {
+	font-size: 10px;
+	margin-left: 3px;
+}
+
+.content {
+	margin: .5em 0 0 60px;
+	font-size: 13px;
+	line-height: 20px;
+}
+
+#footer {
+	clear: both;
+	padding: 30px 0 30px 0;
+	font-size: 13px;
+	color: #666;
+}
+
