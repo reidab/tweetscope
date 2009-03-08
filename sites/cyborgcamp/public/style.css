@@ -1,0 +1,96 @@
+/* @override http://localhost:4567/cyborgcamp.css */
+
+body {
+	background: #9dca77 no-repeat;
+	color: #9cd1f3;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+a {
+	color: #fff;
+	text-decoration: none;
+}
+
+#header h1 a {
+	display: block;
+	background: url(background.jpg);
+	width: 780px;
+	height: 200px;
+	overflow: hidden;
+	text-indent: -999px;
+	margin: 1em auto;
+}
+
+#header div {
+	display: none;
+}
+
+ul {
+	list-style: none;
+	margin: 0 0 0 40px;
+	padding: 0;
+}
+
+img	{
+	border: 0;
+}
+
+li {
+	background: #4f616b;
+	padding: .5em;
+	margin: 0 20px 20px 0;
+	width: 22em;
+	height: 7em;
+	float: left;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	position: relative;
+}
+
+.avatar {
+	float: left;
+	margin-right: .5em;
+}
+
+.author {
+	font-size: 25px;
+}
+
+.published {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: .5em;
+}
+
+.date {
+	font-size: 10px;
+	color: #d2e4b0;
+}
+
+.time {
+	font-size: 25px;
+}
+
+.meridian {
+	font-size: 10px;
+	margin-left: 3px;
+}
+
+.content {
+	margin: .5em 0 0 60px;
+	font-size: 13px;
+	line-height: 20px;
+}
+
+#footer {
+	clear: both;
+	padding: 30px 0 30px 40px;
+	font-size: 13px;
+	color: #666;
+}
+
+#footer a {
+	color: #4f616b;
+}
+

@@ -1,0 +1,7 @@
+# TweetLens Configuration
+
+title: CyborgCamp
+query: "cyborgcamp"
+domain: cyborgcamp.reidab.com
+count: 20
+cache_max_age: 300
