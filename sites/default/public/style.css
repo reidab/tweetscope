@@ -1,7 +1,7 @@
 /* @override http://localhost:4567/afterhours.css */
 
 body {
-	background: #000 url(background.jpg) no-repeat;
+	background: #222;
 	color: #fff;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -12,12 +12,17 @@ a {
 }
 
 #header {
-	display: none;
+  color: #ccc;
+  margin: 0 3em 1em;
+}
+
+#header h1 {
+  margin: 1em 0 0;
 }
 
 ul {
 	list-style: none;
-	margin: 110px 0 0 246px;
+	margin: 0 3em;
 	padding: 0;
 }
 
@@ -40,6 +45,8 @@ li {
 .avatar {
 	float: left;
 	margin-right: .5em;
+	width: 48px;
+	height: 48px;
 }
 
 .author {
@@ -75,7 +82,7 @@ li {
 
 #footer {
 	clear: both;
-	padding: 30px 0 30px 246px;
+	padding: 2em 3em;
 	font-size: 13px;
 	color: #666;
 }
