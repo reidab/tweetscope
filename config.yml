@@ -1,0 +1,5 @@
+# TweetLens Configuration
+
+query: "#afterhours"
+count: 20
+cache_max_age: 300
