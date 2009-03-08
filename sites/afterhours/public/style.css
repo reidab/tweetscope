@@ -1,0 +1,82 @@
+/* @override http://localhost:4567/afterhours.css */
+
+body {
+	background: #000 url(background.jpg) no-repeat;
+	color: #fff;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+a {
+	color: #71b6f1;
+	text-decoration: none;
+}
+
+#header {
+	display: none;
+}
+
+ul {
+	list-style: none;
+	margin: 110px 0 0 246px;
+	padding: 0;
+}
+
+img	{
+	border: 0;
+}
+
+li {
+	background: #111;
+	padding: .5em;
+	margin: 0 20px 20px 0;
+	width: 25em;
+	height: 6em;
+	float: left;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	position: relative;
+}
+
+.avatar {
+	float: left;
+	margin-right: .5em;
+}
+
+.author {
+	font-size: 25px;
+}
+
+.published {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: .5em;
+}
+
+.date {
+	font-size: 10px;
+	color: #444;
+}
+
+.time {
+	font-size: 25px;
+}
+
+.meridian {
+	font-size: 10px;
+	margin-left: 3px;
+}
+
+.content {
+	margin: .5em 0 0 60px;
+	font-size: 13px;
+	line-height: 20px;
+}
+
+#footer {
+	clear: both;
+	padding: 30px 0 30px 246px;
+	font-size: 13px;
+	color: #666;
+}
+
