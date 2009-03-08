@@ -1,5 +1,7 @@
 # TweetLens Configuration
 
+title: "#afterhours"
+tagline: a portland thing
 query: "#afterhours"
 count: 20
 cache_max_age: 300

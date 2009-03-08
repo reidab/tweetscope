@@ -1,13 +1,13 @@
 !!! Strict
 %html
   %head
-    %title #afterhours: a portland thing
+    %title== #{CONFIG.title}: #{CONFIG.tagline}
     %link{ :rel => 'stylesheet', :type => 'text/css', :href => '/style.css' }
   %body
     #header
-      %h1 #afterhours
-      %div a portland thing
-  
+      %h1.page_title= CONFIG.title
+      %div.tagline= CONFIG.tagline
+
     #content
       %ul
         - @feed.items.each do |item|
@@ -20,11 +20,15 @@
               %span.time
                 %span.hour>= item.published.localtime.strftime('%I')
                 %span.minute>= ':'+item.published.localtime.strftime('%M')
-                %span.meridian= item.published.localtime.strftime('%p')      
+                %span.meridian= item.published.localtime.strftime('%p')
             %p.content= prepare_content(item.content)
             
-    #footer 
-      a tiny project by
-      %a{ :href => 'http://reidbeels.com' } Reid Beels 
-        
-        
+    #footer
+      /
+        %p 
+          We&apos;re searching twitter for &ldquo;
+          %span.query>= CONFIG.query
+          \&rdquo;
+      %p
+        a tiny project by
+        %a{ :href => 'http://reidbeels.com' } Reid Beels
