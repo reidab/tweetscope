@@ -3,20 +3,19 @@ require 'open-uri'
 require 'sinatra'
 require 'vendor/htmlentities-4.0.0/lib/htmlentities'
 require 'vendor/simple-rss-1.2/lib/simple-rss'
+require 'vendor/hashes2ostruct'
 SimpleRSS.item_tags << :image
 
-DEFAULT_CONFIG = {  "cache_max_age"=>300, 
-                    "query"=>""
-                  }
+DEFAULT_CONFIG = { "cache_max_age"=>300, "query"=>"" }
 
-CONFIG = OpenStruct.new(DEFAULT_CONFIG.merge((File.exists?('CONFIG.yml') && YAML::load_file('CONFIG.yml')) || {}))
+CONFIG = hashes2ostruct(DEFAULT_CONFIG.merge((File.exists?('CONFIG.yml') && YAML::load_file('CONFIG.yml')) || {}))
 
 querystring = "q=#{CGI::escape(CONFIG.query)}"
 querystring += "&lang=#{CONFIG.language}" if CONFIG.language
 querystring += "&rpp=#{CONFIG.count}" if CONFIG.count
 querystring += "&geocode=#{CONFIG.count}" if CONFIG.geocode
 
-get '/' do
+get '/:site?/?' do |site|
   @feed = SimpleRSS.parse open("http://search.twitter.com/search.atom?#{querystring}").read.gsub('<link type="image/png"','<image')
   headers 'Cache-Control' => "public, max-age=#{CONFIG.cache_max_age}"
   haml :index
