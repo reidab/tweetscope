@@ -26,7 +26,7 @@ get '/:site?/?' do |site|
   querystring += "&geocode=#{@site['geocode']}" if @site['geocode']
     
   @feed = SimpleRSS.parse open("http://search.twitter.com/search.atom?#{querystring}").read.gsub('<link type="image/png"','<image')
-  headers 'Cache-Control' => "public, max-age=#{config['_global']['cache_max_age']}"
+  headers 'Cache-Control' => "public, max-age=#{@site['cache_max_age'] || config['_global']['cache_max_age']}"
   haml :index
 end
 
