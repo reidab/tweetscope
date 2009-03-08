@@ -15,7 +15,7 @@ querystring += "&lang=#{CONFIG.language}" if CONFIG.language
 querystring += "&rpp=#{CONFIG.count}" if CONFIG.count
 querystring += "&geocode=#{CONFIG.count}" if CONFIG.geocode
 
-get '/' do
+get '/:site?/?' do |site|
   @feed = SimpleRSS.parse open("http://search.twitter.com/search.atom?#{querystring}").read.gsub('<link type="image/png"','<image')
   headers 'Cache-Control' => "public, max-age=#{CONFIG.cache_max_age}"
   haml :index
