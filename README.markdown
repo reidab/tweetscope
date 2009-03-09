@@ -28,6 +28,7 @@ Each site's config.yml file holds site-specific settings.
 * __count__: the number of tweets to return per page, up to a maximum of 100.
 * __geocode__: returns tweets by users located within a given radius of the given latitude/longitude, where the user's location is taken from their Twitter profile. The parameter value is specified by "latitide,longitude,radius", where radius units must be specified as either "mi" (miles) or "km" (kilometers). Note that you cannot use the near operator via the API to geocode arbitrary locations; however you can use this geocode parameter to search near geocodes directly.
 
+
 #### Text Snippets ####
 The default theme uses the config file to set the site title and tagline. Additional snippets of text can be added following the same key/value convention and accessed in the view template with `@site['keyname']`.
 
