@@ -1,6 +1,6 @@
-# TweetLens #
+# TweetScope #
 
-TweetLens makes it easy to create themed single-page displays of twitter search results. (See these sites tracking [#afterhours](http://afterhours.reidab.com/), [#getoffmylawn](http://getoffmylawn.reidab.com/), and [CyborgCamp](http://cyborgcamp.reidab.com/) for example.)
+TweetScope makes it easy to create themed single-page displays of twitter search results. (See these sites tracking [#afterhours](http://afterhours.reidab.com/), [#getoffmylawn](http://getoffmylawn.reidab.com/), and [CyborgCamp](http://cyborgcamp.reidab.com/) for example.)
 
 ## Quick Setup ##
 
@@ -8,7 +8,7 @@ TweetLens makes it easy to create themed single-page displays of twitter search 
 2. Edit general_config.yml to set the your site as the defaut.
 3. Edit your site's config.yml file to set your site's title, tagline, query, and the number of results to display.
 4. Customize the appearance of your site by editing the css file (public/style.css) and the view template (views/index.haml). Files added to the public directory, such as images, will be available at the root of your site's domain. The view template is written using [haml](http://haml.hamptoncatlin.com/).
-5. Test things out by running `ruby tweetlens.rb` and visiting [http://localhost:4567](http://localhost:4567) in your browser.
+5. Test things out by running `ruby tweetscope.rb` and visiting [http://localhost:4567](http://localhost:4567) in your browser.
 
 ## Configuration ##
 
@@ -16,7 +16,7 @@ TweetLens makes it easy to create themed single-page displays of twitter search 
 The global\_config.yml file holds application-level settings.
 
 * __default_site__: directory name of the default site
-* __cache\_max\_age__: cache expiry time, in seconds. No caching is performed by TweetLens itself, this simply sets the value of the Cache-Control header for use with an external caching system.
+* __cache\_max\_age__: cache expiry time, in seconds. No caching is performed by TweetScope itself, this simply sets the value of the Cache-Control header for use with an external caching system.
 
 ### Site Configuration ###
 Each site's config.yml file holds site-specific settings. 
@@ -39,10 +39,10 @@ The default theme uses the config file to set the site title and tagline. Additi
 
 ## Multiple Sites ##
 
-A single instance of TweetLens can run many different sites. The domain (or subdomain) being requested is checked against all sites that have the _domain_ or _domains_ option set. If a match is found, that site is served.
+A single instance of TweetScope can run many different sites. The domain (or subdomain) being requested is checked against all sites that have the _domain_ or _domains_ option set. If a match is found, that site is served.
 
 When testing locally, sites can be accessed at http://localhost:4567/_sitename_
 
 ## Deployment ##
 
-The current version of TweetLens is targeted for deployment on Heroku (it includes unpacked gems necessary for running there), but will play nicely with any [Rack](http://rack.rubyforge.org/)-compatible webserver. A guide to Heroku deployment can be found at [http://wiki.github.com/reidab/tweetlens/easy-deployment-to-heroku](http://wiki.github.com/reidab/tweetlens/easy-deployment-to-heroku).
+The current version of TweetScope is targeted for deployment on Heroku (it includes unpacked gems necessary for running there), but will play nicely with any [Rack](http://rack.rubyforge.org/)-compatible webserver. A guide to Heroku deployment can be found at [http://wiki.github.com/reidab/tweetscope/easy-deployment-to-heroku](http://wiki.github.com/reidab/tweetscope/easy-deployment-to-heroku).
