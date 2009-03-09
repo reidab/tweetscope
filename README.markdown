@@ -42,3 +42,7 @@ The default theme uses the config file to set the site title and tagline. Additi
 A single instance of TweetLens can run many different sites. The domain (or subdomain) being requested is checked against all sites that have the _domain_ or _domains_ option set. If a match is found, that site is served.
 
 When testing locally, sites can be accessed at http://localhost:4567/_sitename_
+
+## Deployment ##
+
+The current version of TweetLens is targeted for deployment on Heroku (it includes unpacked gems necessary for running there), but will play nicely with any [Rack](http://rack.rubyforge.org/)-compatible webserver. A guide to Heroku deployment can be found at [http://wiki.github.com/reidab/tweetlens/easy-deployment-to-heroku](http://wiki.github.com/reidab/tweetlens/easy-deployment-to-heroku).
