@@ -39,6 +39,8 @@ The default theme uses the config file to set the site title and tagline. Additi
 
 ## Multiple Sites ##
 
+__WARNING__: I've recently discovered some bugs with how multiple sites handle resetting the public directory. Until these are resolved, use this functionality at your own risk.
+
 A single instance of TweetScope can run many different sites. The domain (or subdomain) being requested is checked against all sites that have the _domain_ or _domains_ option set. If a match is found, that site is served.
 
 When testing locally, sites can be accessed at http://localhost:4567/_sitename_
