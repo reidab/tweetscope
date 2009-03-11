@@ -14,7 +14,7 @@ TweetScope makes it easy to create themed single-page displays of twitter search
 ### Global Configuration ###
 The global\_config.yml file holds application-level settings.
 
-* __default_site__: directory name of the default site
+* __default_site__: directory name of the default site to be served in a multi-site installation if no domain match is found. If this option is not set, TweetScope will display the first site alphabetically.
 * __cache\_max\_age__: cache expiry time, in seconds. No caching is performed by TweetScope itself, this simply sets the value of the Cache-Control header for use with an external caching system.
 
 ### Site Configuration ###
@@ -37,8 +37,6 @@ The default theme uses the config file to set the site title and tagline. Additi
 * __domains__: a collection of domains where this site is accessible (see _Multiple Sites_ below).
 
 ## Multiple Sites ##
-
-__WARNING__: I've recently discovered some bugs with how multiple sites handle resetting the public directory. Until these are resolved, use this functionality at your own risk.
 
 A single instance of TweetScope can run many different sites. The domain (or subdomain) being requested is checked against all sites that have the _domain_ or _domains_ option set. If a match is found, that site is served.
 
