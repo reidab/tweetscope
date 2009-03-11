@@ -4,10 +4,9 @@ TweetScope makes it easy to create themed single-page displays of twitter search
 
 ## Quick Setup ##
 
-1. Copy the default site folder to create your new site.
-2. Edit general_config.yml to set the your site as the defaut.
-3. Edit your site's config.yml file to set your site's title, tagline, query, and the number of results to display.
-4. Customize the appearance of your site by editing the css file (public/style.css) and the view template (views/index.haml). Files added to the public directory, such as images, will be available at the root of your site's domain. The view template is written using [haml](http://haml.hamptoncatlin.com/).
+1. Create a new site with rake site:create
+2. Edit your site's config.yml file (sites/sitename/config.yml) to set your site's title, tagline, query, and the number of results to display.
+4. Customize the appearance of your site by editing the css file (public/sitename/style.css) and the view template (sites/sitename/index.haml). The view template is written using [haml](http://haml.hamptoncatlin.com/).
 5. Test things out by running `ruby tweetscope.rb` and visiting [http://localhost:4567](http://localhost:4567) in your browser.
 
 ## Configuration ##

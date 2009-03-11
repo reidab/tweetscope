@@ -1,0 +1,6 @@
+# TweetScope Configuration
+
+title: %%_SITENAME_%%
+tagline: A New TweetScope Site
+query: "%%_SITENAME_%%"
+count: 20
