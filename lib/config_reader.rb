@@ -6,6 +6,7 @@ class ConfigReader
       next if site == '.' || site == '..' || !File.directory?("sites/#{site}")
       config[site] = read_config_file("sites/#{site}/config.yml")
     end
+    raise "No sites were found. Create a site using 'rake site:create' before running TweetScope." if config.keys.size == 1
     
     config['_domains'] = build_domain_map(config)
     

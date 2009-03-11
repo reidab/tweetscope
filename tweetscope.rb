@@ -9,12 +9,10 @@ SimpleRSS.item_tags << :image
 config = ConfigReader.read
 
 get '/:site?/?' do |site| 
-  site ||= config['_domains'][request.env['SERVER_NAME']]
-  site ||= config['_global']['default_site']
+  site ||= config['_domains'][request.env['SERVER_NAME']] || config['_global']['default_site'] || config.keys.reject{|k| k[0]==95 }.first
   
   raise Sinatra::NotFound unless config.has_key?(site)
-  set :public, File.dirname(__FILE__) + "/sites/#{site}/public"
-  set :views, File.dirname(__FILE__) + "/sites/#{site}/views"
+  set :views, File.dirname(__FILE__) + "/sites/#{site}"
   @site = config[site]
   
   querystring = ''

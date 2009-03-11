@@ -1,2 +1,2 @@
-default_site: default
 cache_max_age: 300
+# default_site: site_name
