@@ -18,7 +18,7 @@ get '/:site?/?' do |site|
   querystring = ''
   querystring += "q=#{CGI::escape(@site['query'])}" if @site['query']
   querystring += "&lang=#{@site['language']}" if @site['language']
-  querystring += "&rpp=#{@site['language']}" if @site['language']
+  querystring += "&rpp=#{@site['count']}" if @site['count']
   querystring += "&geocode=#{@site['geocode']}" if @site['geocode']
     
   @feed = SimpleRSS.parse open("http://search.twitter.com/search.atom?#{querystring}").read.gsub('<link type="image/png"','<image')
