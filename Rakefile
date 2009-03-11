@@ -32,3 +32,8 @@ namespace :site do
   end
 
 end
+
+task :deploy do
+  sh 'git push heroku reidab_sites:master'
+  sh 'heroku open'
+end
