@@ -1,0 +1,61 @@
+ul.tweetscope {
+	list-style: none;
+	margin: 0 3em;
+	padding: 0;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+ul.tweetscope img	{
+	border: 0;
+}
+
+ul.tweetscope li {
+	background: #111;
+	padding: .5em;
+	margin: 0 20px 20px 0;
+	width: 25em;
+	height: 7em;
+	float: left;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	position: relative;
+}
+
+ul.tweetscope .avatar {
+	float: left;
+	margin-right: .5em;
+	width: 48px;
+	height: 48px;
+}
+
+ul.tweetscope .author {
+	font-size: 25px;
+}
+
+ul.tweetscope .published {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: .5em;
+}
+
+ul.tweetscope .date {
+	font-size: 10px;
+	color: #444;
+}
+
+ul.tweetscope .time {
+	font-size: 25px;
+}
+
+ul.tweetscope .meridian {
+	font-size: 10px;
+	margin-left: 3px;
+}
+
+ul.tweetscope .content {
+	margin: .5em 0 0 60px;
+	font-size: 13px;
+	line-height: 20px;
+}
+

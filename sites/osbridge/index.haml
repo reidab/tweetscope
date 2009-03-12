@@ -1,0 +1,65 @@
+!!! Strict
+%html
+  %head
+    %title== #{@site['title']}: #{@site['tagline']}
+    %link{ :rel => 'stylesheet', :type => 'text/css', :href => 'http://opensourcebridge.org/common/osbp_common.css' }
+    %link{ :rel => 'stylesheet', :type => 'text/css', :href => 'osbridge/style.css' }
+    %link{ :rel => 'alternate', :type => 'application/atom+xml', :href => @feed_url }
+  %body
+    #wrapper
+      #header
+        %h1#site-title 
+          %a{ :href => 'http://opensourcebridge.org', :rel => 'home' }= @site['title']
+        %div#site-description= @site['tagline']
+        %div#conference-date-location
+          %p June 17&ndash;19, 2009 - Portland, OR
+          
+      #access
+        .skip-link
+          %a{ :href => '#content' } Skip to content
+        #menu
+          %ul
+            %li
+              %a{ :href => 'http://opensourcebridge.org/about' } About
+            %li
+              %a{ :href => 'http://opensourcebridge.org/attend' } Attend
+            %li
+              %a{ :href => 'http://opensourcebridge.org/proposals' } Proposals
+            %li
+              %a{ :href => 'http://opensourcebridge.org/volunteer' } Get Involved
+            %li
+              %a{ :href => 'http://opensourcebridge.org/sponsors' } Sponsors
+            %li
+              %a{ :href => 'http://opensourcebridge.org/' } Blog
+        
+        #menu-sidebar-background
+        #menu-sidebar-nav
+          %a.register-now-button{ :href => '/attend', :title => 'Register Now' } Register Now
+          %a.submit-a-proposal-button{ :href => '/events/2009/proposals/new', :title => 'Submit a Proposal' } Submit a Proposal
+          
+      #container
+        %h2.entry-title Tweets about Open Source Bridge
+        %ul.tweetscope
+          - @feed.items.each do |item|
+            %li
+              %a.author{ :href => item.author.split(/\n/)[1].strip }
+                %img.avatar{ :src => item.image }
+                %span.name= extract_author_name(item.author)
+              %a.published{ :href => item.link }
+                %span.date= item.published.localtime.strftime('%B %d')
+                %span.time
+                  %span.hour>= item.published.localtime.strftime('%I')
+                  %span.minute>= ':'+item.published.localtime.strftime('%M')
+                  %span.meridian= item.published.localtime.strftime('%p')
+              %p.content= prepare_content(item.content)
+      #footer
+        /
+          %p 
+            We&apos;re searching twitter for &ldquo;
+            %span.query>= @site['query']
+            \&rdquo;
+        %p
+          Powered by 
+          %a{ :href => 'http://github.com/reidab/tweetscope' } TweetScope
+          |
+          %a{ :href => @feed_url } Atom Feed
