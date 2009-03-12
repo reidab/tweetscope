@@ -4,4 +4,6 @@ title: Open Source Bridge
 tagline: The conference for open source citizens.
 query: 'osbridge OR "open source bridge" OR opensourcebridge'
 count: 30
-domain: osbridge.reidab.com
+domains: 
+  - osbridge.reidab.com
+  - tweets.opensourcebridge.org
