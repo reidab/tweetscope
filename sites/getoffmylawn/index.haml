@@ -3,6 +3,7 @@
   %head
     %title== #{@site['title']}
     %link{ :rel => 'stylesheet', :type => 'text/css', :href => '/getoffmylawn/style.css' }
+    %link{ :rel => 'alternate', :type => 'application/atom+xml', :href => @feed_url }
   %body
     #header
       %h1.page_title= @site['title']
@@ -30,4 +31,8 @@
           \&rdquo;
       %p
         a tiny project by
-        %a{ :href => 'http://reidbeels.com' } Reid Beels
+        %a{ :href => 'http://reidbeels.com' }> Reid Beels
+        , powered by 
+        %a{ :href => 'http://github.com/reidab/tweetscope' } TweetScope
+        |
+        %a{ :href => @feed_url } Atom Feed

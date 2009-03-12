@@ -51,6 +51,8 @@ li {
 .avatar {
 	float: left;
 	margin-right: .5em;
+	width: 48px;
+	height: 48px;
 }
 
 .author {
