@@ -1,6 +1,16 @@
+/* @override http://localhost:4567/osbridge/style.css */
+
+h2.entry-title {
+	margin: 0;
+}
+
+div#container {
+	width: 100%;
+}
+
 ul.tweetscope {
 	list-style: none;
-	margin: 0 3em;
+	margin: 2em 0 1em 2em;
 	padding: 0;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -10,11 +20,11 @@ ul.tweetscope img	{
 }
 
 ul.tweetscope li {
-	background: #111;
+	background: #d6edff;
 	padding: .5em;
 	margin: 0 20px 20px 0;
-	width: 25em;
-	height: 7em;
+	width: 20.5em;
+	height: 10.5em;
 	float: left;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
@@ -30,22 +40,17 @@ ul.tweetscope .avatar {
 
 ul.tweetscope .author {
 	font-size: 25px;
+	text-decoration: none;
 }
 
 ul.tweetscope .published {
 	position: absolute;
-	top: 0;
+	bottom: 0;
 	right: 0;
 	padding: .5em;
-}
-
-ul.tweetscope .date {
-	font-size: 10px;
 	color: #444;
-}
-
-ul.tweetscope .time {
-	font-size: 25px;
+	font-size: 10px;
+	text-decoration: none;
 }
 
 ul.tweetscope .meridian {
