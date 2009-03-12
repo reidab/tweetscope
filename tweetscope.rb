@@ -20,8 +20,9 @@ get '/:site?/?' do |site|
   querystring += "&lang=#{@site['language']}" if @site['language']
   querystring += "&rpp=#{@site['count']}" if @site['count']
   querystring += "&geocode=#{@site['geocode']}" if @site['geocode']
-    
-  @feed = SimpleRSS.parse open("http://search.twitter.com/search.atom?#{querystring}").read.gsub('<link type="image/png"','<image')
+  
+  @feed_url = "http://search.twitter.com/search.atom?#{querystring}"
+  @feed = SimpleRSS.parse open(@feed_url).read.gsub('<link type="image/png"','<image')
   headers 'Cache-Control' => "public, max-age=#{@site['cache_max_age'] || config['_global']['cache_max_age']}"
   haml :index
 end
